@@ -67,5 +67,6 @@ static const struct arg args[] = {
 	/* function format          argument */
 	{ datetime, "%s",           "%F %T" },
 	{ battery_perc, "|bat %s%%",    "BAT0" },
+  { run_command, " %s", "cat /sys/class/power_supply/BAT0/status" }, 
 	{ run_command, "|vol %s",	"amixer sget Master | tail -1 | awk '{print $5 }' | sed 's@\\(\\[\\|\\]\\)@@g'"},
 };
